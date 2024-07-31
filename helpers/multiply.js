@@ -16,6 +16,7 @@ const createFile = (basis) => {
                 reject (err)
             } else {
                 resolve(fileName)
+                console.log(output)
             }
         });
     });
