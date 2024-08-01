@@ -2,14 +2,14 @@ const fs = require('fs');
 const colors = require('colors');
 
 
-const createFile = (basis, list) => {
+const createFile = (basis, list, until) => {
     const filePromise = new Promise((resolve, reject) => {
         let output = "";
-        let header = `========== ${basis}-table ==========`.rainbow;
-        let footer = "====================================".rainbow;
-        let fileName = `${basis}-table.txt`
+        let header = `========== Multiplication table from ${basis} to ${until} ==========`.rainbow;
+        let footer = "====================================================================".rainbow;
+        let fileName = `${basis}_multiplication_table_until_${until}.txt`
         output += header + `\n`;
-        for (i = 0 ; i <= 10 ; i++ ) {
+        for (i = 0 ; i <= until ; i++ ) {
             output += `${basis} ${'X'.green} ${i} = ${basis*i}\n`
         };
         output += footer + '\n';
@@ -28,5 +28,4 @@ const createFile = (basis, list) => {
     return filePromise;
 };
 
-// 
 module.exports = { createFile }
