@@ -15,10 +15,10 @@ const createFile = (basis, list) => {
             if (err) {
                 reject (err)
             } else {
-                resolve(fileName)
-                if (list) {
+                if (list === true) {
                     console.log(output)
                 }
+                resolve(fileName)
             }
         });
     });

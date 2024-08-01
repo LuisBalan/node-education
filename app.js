@@ -1,25 +1,5 @@
-const { type } = require('os');
 const { createFile } = require('./helpers/multiply');
-const { describe } = require('yargs');
-const argv = require('yargs')
-                .options({'b': {
-                    alias: 'basis',
-                    type: 'number',
-                },
-                'l': {
-                    alias: 'list',
-                    type: 'boolean',
-                    default: 'false',
-                    describe: 'is --l or --list are entered the multiplication result will be prompted',
-                }
-            }).check((argv, options) => {
-                    if (isNaN(argv.b)){
-                        throw Error('b must be a number')
-                    }
-                    return true
-                })
-                .argv;
-
+const argv = require('./config/yargs');
 
 // const basis = Number(process.argv[2].substring(8));
 const { b, l } = argv;
