@@ -1,4 +1,5 @@
 const { createFile } = require('./helpers/multiply');
+const colors = require('colors');
 const argv = require('./config/yargs');
 
 // const basis = Number(process.argv[2].substring(8));
@@ -9,7 +10,7 @@ createFile(b, l)
 
 // console.log(process.argv)
 console.log(argv)
-console.log('basis: yargs', argv.b)
-console.log('list: yargs', argv.l)
+console.log('basis: yargs'.bgBlue, `${argv.b}`.random)
+console.log('list: yargs'.bgCyan , `${argv.l}`.random )
 // console.log('limit yargs: ', argv.limit)
 // console.log('number yargs', argv.number)

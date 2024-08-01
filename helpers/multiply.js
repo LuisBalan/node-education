@@ -1,4 +1,6 @@
 const fs = require('fs');
+const colors = require('colors');
+
 
 const createFile = (basis, list) => {
     const filePromise = new Promise((resolve, reject) => {
@@ -16,7 +18,7 @@ const createFile = (basis, list) => {
                 reject (err)
             } else {
                 if (list === true) {
-                    console.log(output)
+                    console.log( output.rainbow)
                 }
                 resolve(fileName)
             }
