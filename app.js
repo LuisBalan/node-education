@@ -9,5 +9,6 @@ const argv = require('yargs').argv;
 
 console.log(process.argv)
 console.log(argv)
-console.log('base: yargs', argv.basis)
-console.log('limit yargs: ', argv.limite)
+console.log('basis: yargs', argv.basis)
+console.log('limit yargs: ', argv.limit)
+console.log('number yargs', argv.number)
