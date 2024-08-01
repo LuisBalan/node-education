@@ -5,12 +5,12 @@ const colors = require('colors');
 const createFile = (basis, list) => {
     const filePromise = new Promise((resolve, reject) => {
         let output = "";
-        let header = `========== ${basis}-table ==========`;
-        let footer = "====================================";
+        let header = `========== ${basis}-table ==========`.rainbow;
+        let footer = "====================================".rainbow;
         let fileName = `${basis}-table.txt`
         output += header + `\n`;
         for (i = 0 ; i <= 10 ; i++ ) {
-            output += `${basis} X ${i} = ${basis*i}\n`
+            output += `${basis} ${'X'.green} ${i} = ${basis*i}\n`
         };
         output += footer + '\n';
         fs.writeFile(fileName , output, (err) => {
@@ -18,7 +18,7 @@ const createFile = (basis, list) => {
                 reject (err)
             } else {
                 if (list === true) {
-                    console.log( output.rainbow)
+                    console.log( output )
                 }
                 resolve(fileName)
             }
