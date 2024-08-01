@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const createFile = (basis) => {
+const createFile = (basis, list) => {
     const filePromise = new Promise((resolve, reject) => {
         let output = "";
         let header = `========== ${basis}-table ==========`;
@@ -16,7 +16,9 @@ const createFile = (basis) => {
                 reject (err)
             } else {
                 resolve(fileName)
-                console.log(output)
+                if (list) {
+                    console.log(output)
+                }
             }
         });
     });
