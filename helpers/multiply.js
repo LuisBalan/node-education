@@ -10,7 +10,7 @@ const createFile = (basis, list, until) => {
         let footerContentFile = "====================================================================";
         let header = `${`========== ${basis}-Multiplication table from  to ${until} ==========`.rainbow}`;
         let footer = `${"====================================================================".rainbow}`;
-        let fileName = `${basis}_multiplication_table_until_${until}.txt`
+        let fileName = `./files/${basis}_multiplication_table_until_${until}.txt`
         output += header + `\n`;
         contentFile += headerContentFile + `\n`;
         for (i = 0 ; i <= until ; i++ ) {
