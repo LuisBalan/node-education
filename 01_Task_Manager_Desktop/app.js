@@ -14,5 +14,6 @@ const main = async () => {
 }
 
 console.log('testing comment')
+console.log('testing comment from newest Windows!')
 
 main();
